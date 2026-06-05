@@ -1,0 +1,100 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ff8fa3,#ffc2d1);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:90%;
+max-width:850px;
+padding:35px;
+border-radius:30px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+text-align:center;
+color:white;
+box-shadow:0 10px 40px rgba(0,0,0,.2);
+}
+
+h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.subtitle{
+margin-bottom:25px;
+opacity:.9;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:white;
+color:#ff4d6d;
+}
+
+.message{
+margin-top:25px;
+height:320px;
+overflow-y:auto;
+padding:10px;
+font-size:22px;
+line-height:2;
+white-space:pre-line;
+scroll-behavior:smooth;
+}
+
+.message::-webkit-scrollbar{
+display:none;
+}
+
+#whatsappLink{
+display:none;
+margin-top:25px;
+padding:14px 25px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+}
+
+.floating-heart{
+position:absolute;
+bottom:-50px;
+animation:float linear forwards;
+pointer-events:none;
+}
+
+@keyframes float{
+from{
+transform:translateY(0) rotate(0);
+opacity:1;
+}
+to{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
