@@ -2,7 +2,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Cairo',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -11,9 +11,9 @@ overflow:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ff8fa3,#ffc2d1);
+background:linear-gradient(-45deg,#4a148c,#7b1fa2,#9c27b0,#ce93d8);
 background-size:400% 400%;
-animation:bg 12s ease infinite;
+animation:bg 10s ease infinite;
 }
 
 @keyframes bg{
@@ -27,11 +27,11 @@ width:90%;
 max-width:850px;
 padding:35px;
 border-radius:30px;
-background:rgba(255,255,255,.15);
+background:rgba(255,255,255,.12);
 backdrop-filter:blur(15px);
 text-align:center;
 color:white;
-box-shadow:0 10px 40px rgba(0,0,0,.2);
+box-shadow:0 10px 40px rgba(0,0,0,.3);
 }
 
 h1{
@@ -40,57 +40,46 @@ margin-bottom:15px;
 }
 
 .subtitle{
+font-size:18px;
 margin-bottom:25px;
-opacity:.9;
+color:#ffffff;
 }
 
 button{
 padding:15px 35px;
-border:none;
-border-radius:50px;
 font-size:18px;
 font-weight:bold;
+border:none;
+border-radius:50px;
 cursor:pointer;
 background:white;
-color:#ff4d6d;
+color:#7b1fa2;
 }
 
 .message{
 margin-top:25px;
 height:320px;
 overflow-y:auto;
-padding:10px;
 font-size:22px;
 line-height:2;
 white-space:pre-line;
-scroll-behavior:smooth;
+color:white;
 }
 
 .message::-webkit-scrollbar{
 display:none;
 }
 
-#whatsappLink{
-display:none;
-margin-top:25px;
-padding:14px 25px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-}
-
-.floating-heart{
+.floating{
 position:absolute;
 bottom:-50px;
-animation:float linear forwards;
 pointer-events:none;
+animation:float linear forwards;
 }
 
 @keyframes float{
 from{
-transform:translateY(0) rotate(0);
+transform:translateY(0) rotate(0deg);
 opacity:1;
 }
 to{

@@ -1,36 +1,35 @@
 const messageText = `
 
-في حاجة كنت عاوز أقولها...
+Meine liebe Valentina,💜
 
-يمكن تكون رسالة غريبة شوية.
+heute ist ein ganz besonderer Tag, denn es ist dein Geburtstag. 🎉✨
 
-لكن من أول مرة شوفتك فيها...
+Du bist die erste Freundin in meinem Leben, und ich bin wirklich glücklich, dass wir uns kennengelernt haben.
 
-لفتي  انتباهي بشكل مختلف.
+Unsere Freundschaft hat mir viel Freude und viele schöne Momente geschenkt.
 
-ومعرفتش أنام من كتر التفكير فيكي .
+Ich war immer glücklich, wenn wir miteinander gesprochen haben, und ich habe jedes Gespräch mit dir genossen. 💜
 
-بس حسيت إنك حد مميز.
+Manchmal wünsche ich mir, ich könnte heute in Deutschland sein, um diesen besonderen Tag mit dir zu feiern und gemeinsam schöne Erinnerungen zu schaffen. 🎂✨
 
-ومع الوقت فضلت محتفظ بالإعجاب ده جوايا.
+Du bist ein wunderbarer Mensch, und ich hoffe, dass dein Tag voller Freude, Lachen und Liebe sein wird.
 
-يمكن عمري ما عرفت أقول الكلام ده بشكل مباشر.
+Möge dieses neue Lebensjahr dir Gesundheit, Glück, Erfolg und viele wunderschöne Momente bringen.
 
-لكن حبيت أكون صريح ولو لمرة واحدة.
+Bleib immer so freundlich, lieb und besonders, wie du bist. 💜
 
-مش مستني أي حاجة.
+Ich hoffe, dass all deine Wünsche in Erfüllung gehen und dass dieses Jahr eines der schönsten Jahre deines Lebens wird. ✨
 
-ومش بضغط عليكي بأي شكل.
+Vergiss niemals, wie besonders du bist.
 
-أنا بس حبيت إنك تعرفي...اللي جوايا 
+Alles Gute zum Geburtstag, meine Lieblingsfreundin! 🎉💜
 
-— A
+Dein Freund Anas ❤️
 
 `;
 
 const btn = document.getElementById("openBtn");
 const box = document.getElementById("message");
-
 
 btn.onclick = () => {
 
@@ -47,30 +46,34 @@ i++;
 
 if(i >= messageText.length){
 clearInterval(timer);
-whatsapp.style.display = "inline-block";
 }
 
-}, 90);
+},80);
 
 };
 
-function createHeart(){
+function createEmoji(){
 
-const heart = document.createElement("div");
+const item = document.createElement("div");
 
-heart.className = "floating-heart";
-heart.innerHTML = "❤️";
+item.className = "floating";
 
-heart.style.left = Math.random()*100 + "vw";
-heart.style.fontSize = (15 + Math.random()*20) + "px";
-heart.style.animationDuration = (6 + Math.random()*5) + "s";
+const emojis = ["💜","✨","🎉","🎂","🎈","❤️"];
 
-document.body.appendChild(heart);
+item.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+
+item.style.left = Math.random()*100 + "vw";
+
+item.style.fontSize = (15 + Math.random()*20) + "px";
+
+item.style.animationDuration = (6 + Math.random()*5) + "s";
+
+document.body.appendChild(item);
 
 setTimeout(()=>{
-heart.remove();
+item.remove();
 },11000);
 
 }
 
-setInterval(createHeart,800);
+setInterval(createEmoji,700);
